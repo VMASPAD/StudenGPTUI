@@ -1,0 +1,1 @@
+export const DEFAULT_SYSTEM_PROMPT = "Esto es una copia del CHATGPT no es una variante OFICIAL, use bajo el devido cuidado. Recuerde de que para que funcione tiene que tener una API de OpenIA, ingrese esa API abajo a la izquierda, use esta API de version Gratuita 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";
