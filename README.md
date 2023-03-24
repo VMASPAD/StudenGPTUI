@@ -2,13 +2,13 @@
 
 **Note: Chatbot UI Pro has been renamed to Chatbot UI.**
 
-Chatbot UI is an advanced chatbot kit for OpenAI's chat models built on top of [Chatbot UI Lite](https://github.com/mckaywrigley/chatbot-ui-lite) using Next.js, TypeScript, and Tailwind CSS.
+Chatbot UI is an advanced chatbot kit for OpenAI's chat models built on top of [Chatbot UI Lite](https://github.com/vmaspad/chatbot-ui-lite) using Next.js, TypeScript, and Tailwind CSS.
 
 It aims to mimic ChatGPT's interface and functionality.
 
 All conversations are stored locally on your device.
 
-See a [demo](https://twitter.com/mckaywrigley/status/1636103188733640704).
+See a [demo](https://twitter.com/vmaspad/status/1636103188733640704).
 
 ![Chatbot UI](./public/screenshot.png)
 
@@ -55,11 +55,11 @@ Modify the system prompt in `utils/index.ts`.
 
 Host your own live version of Chatbot UI with Vercel.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmckaywrigley%2Fchatbot-ui)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvmaspad%2FStudenGPTUI)
 
 **Replit**
 
-Fork Chatbot UI on Replit [here](https://replit.com/@MckayWrigley/chatbot-ui-pro?v=1).
+Fork Chatbot UI on Replit [here](https://replit.com/@vmaspad/chatbot-ui-pro?v=1).
 
 **Docker**
 
@@ -73,7 +73,7 @@ docker run -e OPENAI_API_KEY=xxxxxxxx -p 3000:3000 chatgpt-ui
 **1. Clone Repo**
 
 ```bash
-git clone https://github.com/mckaywrigley/chatbot-ui.git
+git clone https://github.com/vmaspad/StudenGPTUI.git
 ```
 
 **2. Install Dependencies**
@@ -102,4 +102,4 @@ You should be able to start chatting.
 
 ## Contact
 
-If you have any questions, feel free to reach out to me on [Twitter](https://twitter.com/mckaywrigley).
+If you have any questions, feel free to reach out to me on [Twitter](https://twitter.com/vmaspad).
