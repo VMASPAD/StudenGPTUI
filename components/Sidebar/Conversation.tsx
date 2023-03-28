@@ -45,7 +45,7 @@ export const ConversationComponent: FC<Props> = ({ selectedConversation, convers
 
   return (
     <button
-      className={`flex w-full gap-3 items-center p-3 text-sm rounded-lg hover:bg-[#343541]/90 transition-colors duration-200 cursor-pointer ${loading ? "disabled:cursor-not-allowed" : ""} ${selectedConversation.id === conversation.id ? "bg-[#343541]/90" : ""}`}
+      className={`flex w-full gap-3 items-center p-3 text-sm rounded-lg hover:bg-[#606C38]/90 transition-colors duration-200 cursor-pointer ${loading ? "disabled:cursor-not-allowed" : ""} ${selectedConversation.id === conversation.id ? "bg-[#261515]/90" : ""}`}
       onClick={() => onSelectConversation(conversation)}
       disabled={loading}
       draggable="true"

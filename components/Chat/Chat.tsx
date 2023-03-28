@@ -1,5 +1,9 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Conversation, KeyValuePair, Message, OpenAIModel } from "@/types";
+import { IconKey } from "@tabler/icons-react";
 import { FC, MutableRefObject, useEffect, useRef, useState } from "react";
+import { Key } from "../Sidebar/Key";
+import { SidebarButton } from "../Sidebar/SidebarButton";
 import { ChatInput } from "./ChatInput";
 import { ChatLoader } from "./ChatLoader";
 import { ChatMessage } from "./ChatMessage";
@@ -66,16 +70,16 @@ export const Chat: FC<Props> = ({ conversation, models, apiKey, isUsingEnv, mess
       };
     }
   }, []);
-
   return (
-    <div className="relative flex-1 overflow-none dark:bg-[#343541] bg-white">
+    <div className="relative flex-1 overflow-none dark:bg-[#007200] bg-white">
       {!apiKey && !isUsingEnv ? (
         <div className="flex flex-col justify-center mx-auto h-full w-[300px] sm:w-[500px] space-y-6">
           <div className="text-2xl font-semibold text-center text-gray-800 dark:text-gray-100">OpenAI API Key Required</div>
-          <div className="text-center text-gray-500 dark:text-gray-400">Ingrese su API de OpenIA, abajo a la izquierda.</div>
-          <div className="text-center text-gray-500 dark:text-gray-400">- O -</div>
+
+          <div className="text-center text-gray-500 dark:text-sky-50">Ingrese su API de OpenAI, abra el panel y ubique su API abajo a la izquierda.</div>
+          <div className="text-center text-gray-500 dark:text-sky-50">- O -</div>
           <button
-            className="flex items-center justify-center mx-auto px-4 py-2 border border-transparent text-xs rounded-md text-white bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+            className="flex items-center justify-center mx-auto px-4 py-2 border border-transparent text-xs rounded-md text-white bg-cyan-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
             onClick={() => onAcceptEnv(true)}
           >
             click if using a .env.local file
@@ -83,7 +87,7 @@ export const Chat: FC<Props> = ({ conversation, models, apiKey, isUsingEnv, mess
         </div>
       ) : modelError ? (
         <div className="flex flex-col justify-center mx-auto h-full w-[300px] sm:w-[500px] space-y-6">
-          <div className="text-center text-red-500">Error fetching models.</div>
+          <div className="text-center text-red-500">No se encontraron modelos de GPT.</div>
           <div className="text-center text-red-500">Make sure your OpenAI API key is set in the bottom left of the sidebar or in a .env.local file and refresh.</div>
           <div className="text-center text-red-500">If you completed this step, OpenAI may be experiencing issues.</div>
         </div>
@@ -129,7 +133,7 @@ export const Chat: FC<Props> = ({ conversation, models, apiKey, isUsingEnv, mess
                 {loading && <ChatLoader />}
 
                 <div
-                  className="bg-white dark:bg-[#343541] h-[162px]"
+                  className="bg-white dark:bg-[#da5e1c] h-[162px]"
                   ref={messagesEndRef}
                 />
               </>
